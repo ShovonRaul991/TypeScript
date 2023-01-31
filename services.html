@@ -39,27 +39,25 @@
             <div class="main">
                 <div class="article form-article">
                     <div class="article-top">
-                        <input class="search-box" type="text" placeholder="search">
+                        <input class="search-box" type="text" placeholder="search" oninput ="searching()" >
                     </div>
                     <div class="form-list-table">
-                        <table id="service-table">
-                            <thead>
+                        <table id="service-table" onchange="checkcount()">
                                 <tr>
-                                    <th class="column1"><input id="checkBoxAll" type="checkbox"></th>
+                                    <th class="column1"><input id="checkBoxAll" type="checkbox" oninput="checking()"></th>
                                     <th class="column2">Name</th>
                                     <th class="column3">Score</th>
                                     <th class="column4">Email</th>
                                     <th class="column5"></th>
                                 </tr>
-                            </thead>
-                            <tbody></tbody>
+                            
                         </table>
                     </div>
                     <div class="result">
-                        <button class="calculate">Calculate</button>
-                        <label class="result-label" for="">Average</label>
+                        <button class="calculate" onclick="averageCount();maxCount()">Calculate</button>
+                        <label class="result-label" for="">Average:</label>
                         <input type="text" id="average">
-                        <label class="result-label" for="">Max</label>
+                        <label class="result-label" for="">Max:</label>
                         <input type="text" id="max">
                     </div> 
                 </div> 

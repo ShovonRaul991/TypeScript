@@ -199,6 +199,11 @@ a{
 #checkBoxAll{
     margin-right: 9px;
 }
+#service-table th{
+    text-transform: uppercase;
+    font-size: 14px;
+    text-align: left;
+}
 
 #service-table th,#service-table td{
     border: 1px solid white;
@@ -244,9 +249,11 @@ a{
     margin-left: 60px;
 }
 #max,#average{
-    width: 20px;
+    width: 30px;
     background-color: transparent;
     border: 0px;
+    color: white;
+    font-size: smaller;
 }
 
 
