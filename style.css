@@ -182,49 +182,46 @@ a{
     float: right;
 }
 .form-list-table{
-    margin:15px 30px 0px;
-    border: 1px solid rgba(255, 255, 255, 0.8);
+    border: 1px solid white;
     height: 360px;
-    display: flex;
-    font-size: 14px;
-    font-weight: lighter;
+    max-width: 690px;
+    margin-left: 4%;
 }
-.columnA{
-    width:5%;
-    border-right: 1px solid white;
+#service-table {
+    width: 100%;
+    border: 1px solid white;
+    border-collapse: collapse;
+    font-size: 10px;
+    font-weight:normal;
+    margin: auto;
+    
 }
-.columnB{
-    width:25%;
-    border-right: 1px solid white;
-}
-.columnC{
-    width:10%;
-    border-right: 1px solid white;
-}
-.columnD{
-    width:35%;
-    border-right: 1px solid white;
-}
-.columnE{
-    width:25%;
-}
-.active_grid_items{
-    border-bottom: 1px solid white;
-    height: 30px;
-    padding-left: 10px;
-}
-#form-checkbox,#checkbox{
-    height: 15px;
-    width: 15px;
-    margin-top: 6px;
-}
-.column-head{
-    font-weight: bolder;
-    text-transform: uppercase;
-    text-align: center;
-    padding-top: 6px;
+#checkBoxAll{
+    margin-right: 9px;
 }
 
+#service-table th,#service-table td{
+    border: 1px solid white;
+    border-collapse: collapse;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.column1{
+    width: 5%;
+}
+.column2{
+    width:25%;
+}
+.column3{
+    width: 10%;
+}
+.column4{
+    width: 35%;
+}
+.column5{
+    width: 25%
+}
 
 .result{
     padding-left: 30px;

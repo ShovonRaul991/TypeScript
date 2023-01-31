@@ -5,7 +5,7 @@
     <title>Services</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onload="addRow()">
         <div class="total">
             <div class="header">
                 <div>
@@ -42,71 +42,18 @@
                         <input class="search-box" type="text" placeholder="search">
                     </div>
                     <div class="form-list-table">
-                        <div class="columnA grid-container">
-                            <div class="grid_items active_grid_items"><input type="checkbox" name="" id="form-checkbox" onclick="checkboxChecking()"></div>
-                            <div class="grid_items active_grid_items"><input type="checkbox" name="" id="checkbox"></div>
-                            <div class="grid_items active_grid_items"><input type="checkbox" name="" id="checkbox"></div>
-                            <div class="grid_items active_grid_items"><input type="checkbox" name="" id="checkbox"></div>
-                            <div class="grid_items active_grid_items"><input type="checkbox" name="" id="checkbox"></div>
-                            <div class="grid_items active_grid_items"><input type="checkbox" name="" id="checkbox"></div>
-                            <div class="grid_items active_grid_items"><input type="checkbox" name="" id="checkbox"></div>
-                            <div class="grid_items active_grid_items"><input type="checkbox" name="" id="checkbox"></div>
-                            <div class="grid_items"></div>
-                            <div class="grid_items"></div>
-                            <div class="grid_items"></div>
-                        </div>
-                        <div class="columnB grid-container">
-                            <div class="grid_items active_grid_items column-head">Name</div>
-                            <div class="grid_items active_grid_items">Vijay Prakash</div>
-                            <div class="grid_items active_grid_items">Sashi Pagadala</div>
-                            <div class="grid_items active_grid_items"></div>
-                            <div class="grid_items active_grid_items"></div>
-                            <div class="grid_items active_grid_items"></div>
-                            <div class="grid_items active_grid_items"></div>
-                            <div class="grid_items active_grid_items"></div>
-                            <div class="grid_items"></div>
-                            <div class="grid_items"></div>
-                            <div class="grid_items"></div>
-                        </div>
-                            <div class="columnC grid-container">
-                            <div class="grid_items active_grid_items column-head">Score</div>
-                            <div class="grid_items active_grid_items">34</div>
-                            <div class="grid_items active_grid_items">21</div>
-                            <div class="grid_items active_grid_items"></div>
-                            <div class="grid_items active_grid_items"></div>
-                            <div class="grid_items active_grid_items"></div>
-                            <div class="grid_items active_grid_items"></div>
-                            <div class="grid_items active_grid_items"></div>
-                            <div class="grid_items"></div>
-                            <div class="grid_items"></div>
-                            <div class="grid_items"></div>
-                        </div>
-                        <div class="columnD grid-container">
-                            <div class="grid_items active_grid_items column-head">Email</div>
-                            <div class="grid_items active_grid_items">vijay@technovert.com</div>
-                            <div class="grid_items active_grid_items">sashi@technovert.com</div>
-                            <div class="grid_items active_grid_items"></div>
-                            <div class="grid_items active_grid_items"></div>
-                            <div class="grid_items active_grid_items"></div>
-                            <div class="grid_items active_grid_items"></div>
-                            <div class="grid_items active_grid_items"></div>
-                            <div class="grid_items"></div>
-                            <div class="grid_items"></div>
-                            <div class="grid_items"></div>
-                        </div>
-                        <div class="columnE grid-container">
-                            <div class="grid_items active_grid_items column-head"></div>
-                            <div class="grid_items active_grid_items"></div>
-                            <div class="grid_items active_grid_items"></div>
-                            <div class="grid_items active_grid_items"></div>
-                            <div class="grid_items active_grid_items"></div>
-                            <div class="grid_items active_grid_items"></div>
-                            <div class="grid_items active_grid_items"></div>
-                            <div class="grid_items active_grid_items"></div>
-                            <div class="grid_items"></div>
-                            <div class="grid_items"></div>
-                            <div class="grid_items"></div>
-                        </div>
+                        <table id="service-table">
+                            <thead>
+                                <tr>
+                                    <th class="column1"><input id="checkBoxAll" type="checkbox"></th>
+                                    <th class="column2">Name</th>
+                                    <th class="column3">Score</th>
+                                    <th class="column4">Email</th>
+                                    <th class="column5"></th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
                     </div>
                     <div class="result">
                         <button class="calculate">Calculate</button>
