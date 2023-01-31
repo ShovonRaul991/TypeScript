@@ -1,0 +1,296 @@
+
+*{
+    box-sizing: border-box;  
+    padding: 0;
+    margin: 0;
+}
+
+.hr{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+body{
+    background-image: url('bg.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: cover;
+    background-attachment: fixed;
+}
+
+
+.total{
+    max-width: 767px;
+    margin: 0 auto; 
+    color: white; 
+    font-family: 'Trebuchet MS';  
+    
+}
+
+.top-navigation{
+    list-style-type: '|';
+    font-size: 10px;
+    font-weight: normal;
+    display: inline-flex;
+    float: right;
+    font-family: 'Trebuchet MS'; 
+    background-color: black;
+    background: rgba(16, 34, 58, .4);
+    margin-bottom: 25px;
+    margin-right: 0px;
+    
+}
+
+.top-navigation li:first-child{
+    list-style: none;
+}
+
+.top-navigation li{
+    padding: 5px;
+    margin-right: 5px;
+    color: white;   
+}
+
+
+.navigation-items{
+    display: flex;
+    width: 100%;
+    background: rgba(0, 0, 0, .7);
+    padding-top: 5px;
+    height: 50px;
+    margin-bottom: 0px;
+    font-family: 'Trebuchet MS';
+    outline: 1px solid #454E5F;
+    outline-offset: -5px;
+    list-style-type: none;
+    font-size: 16px;  
+    
+}
+
+
+
+
+.navigation-items a:hover, .selected{
+    background-color: #486881;
+    color: white;
+    border-radius: 2px;
+}
+
+.navigation-items{
+    padding-top: 17px;
+}
+
+.navigation-items a{
+    color: #A2D1ED;
+    text-decoration: none;
+    padding-right: 12px; 
+    padding-left: 12px;
+    border-right: 1px solid white;  
+}
+
+.navigation-items li .last-navigation-item{
+    border-right: 0px;
+}
+
+
+.navigation-items img{
+    position: relative;
+    padding-right: 20px;
+    top: -60px;
+    height: 140px;
+    width:200px;
+    left: 10px;
+}
+
+
+
+.heading h1{
+    padding-top: 30px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 35px;
+    word-spacing: 5px;
+    font-family: monospace;
+    font-weight:lighter;
+    letter-spacing: 4px;
+    background: rgba(0, 0, 0, .28);
+    text-shadow: 1px 1px 1px #000;
+    padding-left: 30px;
+    /* text-shadow: 1px 1px 1px black; */
+    
+}
+
+.heading-space{
+    height: 40px
+}
+
+.main{
+    background-color: rgba(11, 27, 49, 0.9);
+    padding: 3px;
+    padding-bottom: 4px;
+    
+}
+.article{
+    display: flex;
+    font-size: small;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0);
+    height: auto;
+    margin: 0px;
+    border-width: 1px;
+    border-style: solid;
+    border-image: 
+    linear-gradient(
+      to top, 
+      #37475E, 
+      rgba(0, 0, 0, 0)
+    ) 10;
+}
+
+    /* Home page section */
+
+.section {
+    margin: 15px;
+    width: 30%;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.section img{
+    height: 100px;
+    width: 220px;
+    padding-bottom: 15px;
+    
+}
+
+
+a{
+    color: #ABDDF6;
+}
+
+   /* service page section*/
+.form-article{
+    display: grid;
+}
+.article-top{
+    padding: 10px;
+    margin-right: 20px;
+}
+.search-box{
+    float: right;
+}
+.form-list-table{
+    margin:15px 30px 0px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    height: 360px;
+    display: flex;
+    font-size: 14px;
+    font-weight: lighter;
+}
+.columnA{
+    width:5%;
+    border-right: 1px solid white;
+}
+.columnB{
+    width:25%;
+    border-right: 1px solid white;
+}
+.columnC{
+    width:10%;
+    border-right: 1px solid white;
+}
+.columnD{
+    width:35%;
+    border-right: 1px solid white;
+}
+.columnE{
+    width:25%;
+}
+.active_grid_items{
+    border-bottom: 1px solid white;
+    height: 30px;
+    padding-left: 10px;
+}
+#form-checkbox,#checkbox{
+    height: 15px;
+    width: 15px;
+    margin-top: 6px;
+}
+.column-head{
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 6px;
+}
+
+
+.result{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    height:70px;
+}
+
+.calculate{
+    width:100px;
+    text-align: left;
+    padding-left: 10px;
+    background-color: #28416D;
+    color: white;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border: 0px;
+}
+.result-label{
+    margin-left: 60px;
+}
+#max,#average{
+    width: 20px;
+    background-color: transparent;
+    border: 0px;
+}
+
+
+.footer{
+    margin-top: 10px;
+    text-align: center;
+    background-color: black;
+    background: rgba(0, 0, 0, .4);
+    text-decoration: none;
+}
+
+.footer a{
+    
+    color: white;
+    font-size: x-small;
+    
+    
+}
+
+
+.footer p{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: x-small;
+    font-family: 'Trebuchet MS';
+}
+
+.footer a{
+    
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.last-footer-navigation{
+    border-left: 1px solid white;
+}
+
+
+
+
+
+
+
+
