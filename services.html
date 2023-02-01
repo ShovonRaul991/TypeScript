@@ -39,18 +39,17 @@
             <div class="main">
                 <div class="article form-article">
                     <div class="article-top">
-                        <input class="search-box" type="text" placeholder="search" oninput ="searching()" >
+                        <input id="search-box" type="text" placeholder="search" oninput ="searching()" >
                     </div>
                     <div class="form-list-table">
                         <table id="service-table" onchange="checkcount()">
                                 <tr>
-                                    <th class="column1"><input id="checkBoxAll" type="checkbox" oninput="checking()"></th>
+                                    <th class="column1"><input class="" id="checkBoxAll" type="checkbox" onchange="checking()"></th>
                                     <th class="column2">Name</th>
                                     <th class="column3">Score</th>
                                     <th class="column4">Email</th>
                                     <th class="column5"></th>
-                                </tr>
-                            
+                                </tr>   
                         </table>
                     </div>
                     <div class="result">

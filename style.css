@@ -178,12 +178,11 @@ a{
     padding: 10px;
     margin-right: 20px;
 }
-.search-box{
+#search-box{
     float: right;
 }
 .form-list-table{
     border: 1px solid white;
-    height: 360px;
     max-width: 690px;
     margin-left: 4%;
 }
@@ -191,7 +190,7 @@ a{
     width: 100%;
     border: 1px solid white;
     border-collapse: collapse;
-    font-size: 10px;
+    font-size: 13px;
     font-weight:normal;
     margin: auto;
     
@@ -204,6 +203,9 @@ a{
     font-size: 14px;
     text-align: left;
 }
+
+
+
 
 #service-table th,#service-table td{
     border: 1px solid white;
