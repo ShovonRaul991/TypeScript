@@ -3,7 +3,7 @@ class person{
     name: string ; 
     email: string ;
     score: number;
-    constructor(name?:string,score?:number,email?:string){
+    constructor(name:string,score:number,email:string){
         this.name = name;
         this.email = email;
         this.score = score;
@@ -16,23 +16,24 @@ let checkall = (document.getElementById('checkBoxAll') as HTMLInputElement);
 let checkbox = document.getElementsByClassName('checklist') as HTMLCollection;
 
 
+
 let person1 = new person('Vijay Prakash',34,'vijay@technovert.com');
 let person2 = new person('Sashi Pagadala',21,'sashi@technovert.com');
-/*
+
 let person3 = new person('Subhas Raju',24,'subhas@technovert.com');
 let person4 = new person('Shekhar Chandra',35,'shekhar@technovert.com');
 let person5 = new person('Ajit Maheshwari',30,'ajit@technovert.com');
 let person6 = new person('Mukesh Roy',34,'mukesh@technovert.com');
 let person7 = new person('Rehan Sharma',32,'rehan@technovert.com');
-let person8 = new person(null,null,null);
-person3,person4,person5,person6,person7,person8
-*/
-let IdentityArray = [person1,person2];
+let person8 = new person('Raj Thakur',29,'raj@technovert.com');
+//person3,person4,person5,person6,person7,person8
+
+let IdentityArray = [person1,person2,person3,person4,person5,person6,person7,person8];
 
 function addRow(){
     
      for(let i =0;i<IdentityArray.length;i++){
-        let row = myTable.insertRow(-1);
+        let row = myTable.insertRow();
         let cell1 = row.insertCell(0);
         let cell2 = row.insertCell(1);
         let cell3 = row.insertCell(2);
@@ -75,34 +76,43 @@ function addRow(){
 }
 
 function averageCount(){
+    /*
     let total=0,count=0;
     for(let i =0;i<IdentityArray.length;i++){
-        if(IdentityArray[i].score!=null && IdentityArray[i].checked===true)
+        if(IdentityArray[i].score && IdentityArray[i].checked)
         {
             total+=IdentityArray[i].score;
             count +=1;
         }
     }
-    let average: number = total/count || 0;
-    (document.getElementById('average') as HTMLInputElement).value = String(average);
+    let average: number = (total/count) || 0;
+    */
+    let checkedArray = IdentityArray.filter(person=> person.checked).map(person=>person.score);
+    let average: number = checkedArray.reduce(function(sum,value){return sum+value;},0)/checkedArray.length || 0;
+    (document.getElementById('average') as HTMLInputElement).value = String(average.toFixed(2));
 }
 
 function maxCount(){
+    /*
     let max = 0;
     for(let i =0;i<IdentityArray.length;i++){
-        if(max<IdentityArray[i].score && IdentityArray[i].checked===true)
+        if(max<IdentityArray[i].score && IdentityArray[i].checked)
         {
             max = IdentityArray[i].score;
         }
     }
+    */
+    let checkedArray = IdentityArray.filter(person=> person.checked).map(person=>person.score);
+    let max = Math.max(...checkedArray) || 0;    //spread syntax or spread operator
     (document.getElementById('max') as HTMLInputElement).value = String(max);
 }
 
-function checkcount(){
+/*function for each checkbox*/
+function rowCheckboxFunction(){
     let number = 0;
     for(let i=0;i<checkbox.length;i++)
     {
-        if((checkbox[i] as HTMLInputElement).checked==true){
+        if((checkbox[i] as HTMLInputElement).checked){
             IdentityArray[i].checked = true;
             number+=1;
         }
@@ -116,8 +126,8 @@ function checkcount(){
     }
 }
 
-
-function checking(){
+/* function for select all*/
+function SelectAll(){
     
     if(checkall.checked){
         for(let i=0;i<checkbox.length;i++)

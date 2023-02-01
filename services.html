@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Services</title>
     <link rel="stylesheet" href="style.css">
+    <script src="services.js" defer></script>
 </head>
 <body onload="addRow()">
         <div class="total">
@@ -42,9 +43,9 @@
                         <input id="search-box" type="text" placeholder="search" oninput ="searching()" >
                     </div>
                     <div class="form-list-table">
-                        <table id="service-table" onchange="checkcount()">
+                        <table id="service-table" onchange="rowCheckboxFunction()">
                                 <tr>
-                                    <th class="column1"><input class="" id="checkBoxAll" type="checkbox" onchange="checking()"></th>
+                                    <th class="column1"><label class="checkbox_Container" for=""><input class="checkBoxAll" id="checkBoxAll" type="checkbox" onchange="SelectAll()"><span class="showedChecklist"></span></label></th>
                                     <th class="column2">Name</th>
                                     <th class="column3">Score</th>
                                     <th class="column4">Email</th>
@@ -68,6 +69,6 @@
                 <a class="last-footer-navigation" href="">Request a Quote</a></p>
             </div>
 
-    <script src="services.js"></script>
+    
 </body>
 </html>

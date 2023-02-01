@@ -195,17 +195,41 @@ a{
     margin: auto;
     
 }
-#checkBoxAll{
-    margin-right: 9px;
-}
+
 #service-table th{
     text-transform: uppercase;
     font-size: 14px;
     text-align: left;
 }
 
+/* custom checkbox start */
+.checkbox_Container{
+    position: relative;
+    top: 6px
+}
+.showedChecklist{
+    position: absolute;
+    bottom: 1px;
+    height: 13px;
+    width: 13px;
+    border: 1px solid white;
+}
+.checklist,.checkBoxAll{
+    opacity: 0;
+    position: absolute;
+    bottom:1px;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+}
 
-
+.checklist:checked{
+    opacity: 1;
+}
+.checkBoxAll:checked{
+    opacity: 1;
+}
+/* custom checkbox end*/
 
 #service-table th,#service-table td{
     border: 1px solid white;
@@ -248,10 +272,10 @@ a{
     border: 0px;
 }
 .result-label{
-    margin-left: 60px;
+    margin-left: 40px;
 }
 #max,#average{
-    width: 30px;
+    width: 50px;
     background-color: transparent;
     border: 0px;
     color: white;
