@@ -102,8 +102,12 @@ function maxCount(){
         }
     }
     */
+   let max = 0;
     let checkedArray = IdentityArray.filter(person=> person.checked).map(person=>person.score);
-    let max = Math.max(...checkedArray) || 0;    //spread syntax or spread operator
+    if(checkedArray.length>0){
+        max = Math.max(...checkedArray);  
+    }
+      //spread syntax or spread operator
     (document.getElementById('max') as HTMLInputElement).value = String(max);
 }
 
@@ -130,10 +134,12 @@ function rowCheckboxFunction(){
 function SelectAll(){
     
     if(checkall.checked){
+        
         for(let i=0;i<checkbox.length;i++)
         {
             (checkbox[i] as HTMLInputElement).checked = true;
         }
+        
     }
     else{
         for(let i=0;i<checkbox.length;i++)

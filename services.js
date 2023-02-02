@@ -84,8 +84,12 @@ function maxCount() {
         }
     }
     */
+    var max = 0;
     var checkedArray = IdentityArray.filter(function (person) { return person.checked; }).map(function (person) { return person.score; });
-    var max = Math.max.apply(Math, checkedArray) || 0; //spread syntax or spread operator
+    if (checkedArray.length > 0) {
+        max = Math.max.apply(Math, checkedArray);
+    }
+    //spread syntax or spread operator
     document.getElementById('max').value = String(max);
 }
 /*function for each checkbox*/

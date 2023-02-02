@@ -213,12 +213,13 @@ a{
     height: 13px;
     width: 13px;
     border: 1px solid white;
+    z-index: 1;
 }
 .checklist,.checkBoxAll{
     opacity: 0;
     position: absolute;
     bottom:1px;
-    z-index: 1;
+    z-index: 2;
     margin: 0;
     padding: 0;
 }
