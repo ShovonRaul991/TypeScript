@@ -20,7 +20,7 @@ body{
 }
 
 
-.total{
+.page-container{
     max-width: 767px;
     margin: 0 auto; 
     color: white; 
@@ -178,7 +178,7 @@ a{
     padding: 10px;
     margin-right: 20px;
 }
-#search-box{
+#SearchBox{
     float: right;
 }
 .form-list-table{
@@ -186,7 +186,7 @@ a{
     max-width: 690px;
     margin-left: 4%;
 }
-#service-table {
+#ServiceTable {
     width: 100%;
     border: 1px solid white;
     border-collapse: collapse;
@@ -196,7 +196,7 @@ a{
     
 }
 
-#service-table th{
+#ServiceTable th{
     text-transform: uppercase;
     font-size: 14px;
     text-align: left;
@@ -232,7 +232,7 @@ a{
 }
 /* custom checkbox end*/
 
-#service-table th,#service-table td{
+#ServiceTable th,#ServiceTable td{
     border: 1px solid white;
     border-collapse: collapse;
     padding-left: 10px;
@@ -275,7 +275,7 @@ a{
 .result-label{
     margin-left: 40px;
 }
-#max,#average{
+#Max,#Average{
     width: 50px;
     background-color: transparent;
     border: 0px;

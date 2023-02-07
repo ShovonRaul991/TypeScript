@@ -1,133 +1,133 @@
-var person = /** @class */ (function () {
-    function person(name, score, email) {
+"use strict";
+class Person {
+    constructor(name, score, email) {
         this.name = name;
         this.email = email;
         this.score = score;
         this.checked = false;
     }
-    return person;
-}());
-var myTable = document.getElementById("service-table");
-var checkall = document.getElementById('checkBoxAll');
-var checkbox = document.getElementsByClassName('checklist');
-var person1 = new person('Vijay Prakash', 34, 'vijay@technovert.com');
-var person2 = new person('Sashi Pagadala', 21, 'sashi@technovert.com');
-var person3 = new person('Subhas Raju', 24, 'subhas@technovert.com');
-var person4 = new person('Shekhar Chandra', 35, 'shekhar@technovert.com');
-var person5 = new person('Ajit Maheshwari', 30, 'ajit@technovert.com');
-var person6 = new person('Mukesh Roy', 34, 'mukesh@technovert.com');
-var person7 = new person('Rehan Sharma', 32, 'rehan@technovert.com');
-var person8 = new person('Raj Thakur', 29, 'raj@technovert.com');
+}
+let formTable = document.getElementById("ServiceTable");
+let checkAll = document.getElementById('CheckBoxAll');
+let checkBox = document.getElementsByClassName('checklist');
+let person1 = new Person('Vijay Prakash', 34, 'vijay@technovert.com');
+let person2 = new Person('Sashi Pagadala', 21, 'sashi@technovert.com');
+let person3 = new Person('Subhas Raju', 24, 'subhas@technovert.com');
+let person4 = new Person('Shekhar Chandra', 35, 'shekhar@technovert.com');
+let person5 = new Person('Ajit Maheshwari', 30, 'ajit@technovert.com');
+let person6 = new Person('Mukesh Roy', 34, 'mukesh@technovert.com');
+let person7 = new Person('Rehan Sharma', 32, 'rehan@technovert.com');
+let person8 = new Person('Raj Thakur', 29, 'raj@technovert.com');
 //person3,person4,person5,person6,person7,person8
-var IdentityArray = [person1, person2, person3, person4, person5, person6, person7, person8];
+let personArray = [person1, person2, person3, person4, person5, person6, person7, person8];
 function addRow() {
-    for (var i = 0; i < IdentityArray.length; i++) {
-        var row_1 = myTable.insertRow();
-        var cell1_1 = row_1.insertCell(0);
-        var cell2_1 = row_1.insertCell(1);
-        var cell3_1 = row_1.insertCell(2);
-        var cell4_1 = row_1.insertCell(3);
-        var cell5_1 = row_1.insertCell(4);
+    for (let i = 0; i < personArray.length; i++) {
+        let row = formTable.insertRow();
+        let checkBoxCell = row.insertCell(0);
+        let nameCell = row.insertCell(1);
+        let scoreCell = row.insertCell(2);
+        let emailCell = row.insertCell(3);
+        let blanckCell = row.insertCell(4);
         //checkbox creation
-        var Box = document.createElement('label');
-        Box.setAttribute('class', 'checkbox_Container');
-        cell1_1.appendChild(Box);
-        var cBoxHide = document.createElement('input');
-        cBoxHide.setAttribute('type', 'checkbox');
-        cBoxHide.setAttribute('class', 'checklist');
-        var cBoxShow = document.createElement('span');
-        cBoxShow.setAttribute('class', 'showedChecklist');
-        Box.appendChild(cBoxHide);
-        Box.appendChild(cBoxShow);
-        cell2_1.innerHTML = '<span class="content">' + IdentityArray[i].name + '</span>';
-        cell3_1.innerHTML = '<span class="content">' + String(IdentityArray[i].score) + '</span>';
-        cell4_1.innerHTML = '<span class="content">' + IdentityArray[i].email + '</span>';
+        var checkBoxLabel = document.createElement('label');
+        checkBoxLabel.setAttribute('class', 'checkbox_Container');
+        checkBoxCell.appendChild(checkBoxLabel);
+        var checkBoxHide = document.createElement('input');
+        checkBoxHide.setAttribute('type', 'checkbox');
+        checkBoxHide.setAttribute('class', 'checklist');
+        var checkBoxShow = document.createElement('span');
+        checkBoxShow.setAttribute('class', 'showedChecklist');
+        checkBoxLabel.appendChild(checkBoxHide);
+        checkBoxLabel.appendChild(checkBoxShow);
+        nameCell.innerHTML = '<span class="content">' + personArray[i].name + '</span>';
+        scoreCell.innerHTML = '<span class="content">' + String(personArray[i].score) + '</span>';
+        emailCell.innerHTML = '<span class="content">' + personArray[i].email + '</span>';
     }
-    var row = myTable.insertRow(-1);
-    var cell1 = row.insertCell(0);
-    var cell2 = row.insertCell(1);
-    var cell3 = row.insertCell(2);
-    var cell4 = row.insertCell(3);
-    var cell5 = row.insertCell(4);
-    cell1.style.height = cell2.style.height = cell3.style.height = cell4.style.height = cell5.style.height = '100px';
+    let row = formTable.insertRow();
+    let checkBoxCell = row.insertCell(0);
+    let nameCell = row.insertCell(1);
+    let scoreCell = row.insertCell(2);
+    let emailCell = row.insertCell(3);
+    let blanckCell = row.insertCell(4);
+    checkBoxCell.style.height = nameCell.style.height = scoreCell.style.height = emailCell.style.height = blanckCell.style.height = '100px';
     /*
     for (let i = 0; i < checkedbox.length; i++) {
        checkedbox[i].addEventListener("click", function() {
-         IdentityArray[i].checked = true;
+         personArray[i].checked = true;
        });
    }
    */
 }
-function averageCount() {
+function averageCalculate() {
     /*
     let total=0,count=0;
-    for(let i =0;i<IdentityArray.length;i++){
-        if(IdentityArray[i].score && IdentityArray[i].checked)
+    for(let i =0;i<personArray.length;i++){
+        if(personArray[i].score && personArray[i].checked)
         {
-            total+=IdentityArray[i].score;
+            total+=personArray[i].score;
             count +=1;
         }
     }
     let average: number = (total/count) || 0;
     */
-    var checkedArray = IdentityArray.filter(function (person) { return person.checked; }).map(function (person) { return person.score; });
-    var average = checkedArray.reduce(function (sum, value) { return sum + value; }, 0) / checkedArray.length || 0;
-    document.getElementById('average').value = String(average.toFixed(2));
+    let checkedArray = personArray.filter(person => person.checked).map(person => person.score);
+    let average = checkedArray.reduce(function (sum, value) { return sum + value; }, 0) / checkedArray.length || 0;
+    document.getElementById('Average').value = String(average.toFixed(2));
 }
-function maxCount() {
+function maxCalculate() {
     /*
     let max = 0;
-    for(let i =0;i<IdentityArray.length;i++){
-        if(max<IdentityArray[i].score && IdentityArray[i].checked)
+    for(let i =0;i<personArray.length;i++){
+        if(max<personArray[i].score && personArray[i].checked)
         {
-            max = IdentityArray[i].score;
+            max = personArray[i].score;
         }
     }
     */
-    var max = 0;
-    var checkedArray = IdentityArray.filter(function (person) { return person.checked; }).map(function (person) { return person.score; });
+    let max = 0;
+    let checkedArray = personArray.filter(person => person.checked).map(person => person.score);
     if (checkedArray.length > 0) {
-        max = Math.max.apply(Math, checkedArray);
+        max = Math.max(...checkedArray);
     }
     //spread syntax or spread operator
-    document.getElementById('max').value = String(max);
+    document.getElementById('Max').value = String(max);
 }
 /*function for each checkbox*/
-function rowCheckboxFunction() {
-    var number = 0;
-    for (var i = 0; i < checkbox.length; i++) {
-        if (checkbox[i].checked) {
-            IdentityArray[i].checked = true;
+function checkboxChecked() {
+    let number = 0;
+    for (let i = 0; i < checkBox.length; i++) {
+        if (checkBox[i].checked) {
+            personArray[i].checked = true;
             number += 1;
         }
         else {
-            checkall.checked = false;
-            IdentityArray[i].checked = false;
+            checkAll.checked = false;
+            personArray[i].checked = false;
         }
     }
-    if (number == IdentityArray.length) {
-        checkall.checked = true;
+    if (number == personArray.length) {
+        checkAll.checked = true;
     }
 }
 /* function for select all*/
-function SelectAll() {
-    if (checkall.checked) {
-        for (var i = 0; i < checkbox.length; i++) {
-            checkbox[i].checked = true;
+function selectAllCheckBox() {
+    if (checkAll.checked) {
+        for (let i = 0; i < checkBox.length; i++) {
+            checkBox[i].checked = true;
         }
     }
     else {
-        for (var i = 0; i < checkbox.length; i++) {
-            checkbox[i].checked = false;
+        for (let i = 0; i < checkBox.length; i++) {
+            checkBox[i].checked = false;
         }
     }
 }
-function searching() {
-    var inputs = document.getElementById('search-box');
-    var value = inputs.value;
-    var names = document.querySelectorAll('.content');
-    var regex = new RegExp(value, "gi");
-    names.forEach(function (ele) {
+function searchingInTable() {
+    let inputs = document.getElementById('SearchBox');
+    let value = inputs.value;
+    const names = document.querySelectorAll('.content');
+    let regex = new RegExp(value, "gi");
+    names.forEach((ele) => {
         ele.innerHTML = (ele.innerText).replace(regex, "<mark>$&</mark>");
     });
 }

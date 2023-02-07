@@ -7,7 +7,7 @@
     <script src="services.js" defer></script>
 </head>
 <body onload="addRow()">
-        <div class="total">
+        <div class="page-container">
             <div class="header">
                 <div>
                     <ul class="top-navigation">
@@ -40,12 +40,12 @@
             <div class="main">
                 <div class="article form-article">
                     <div class="article-top">
-                        <input id="search-box" type="text" placeholder="search" oninput ="searching()" >
+                        <input id="SearchBox" type="text" placeholder="search" oninput ="searchingInTable()" >
                     </div>
                     <div class="form-list-table">
-                        <table id="service-table" onchange="rowCheckboxFunction()">
+                        <table id="ServiceTable" onchange="checkboxChecked()">
                                 <tr>
-                                    <th class="column1"><label class="checkbox_Container" for=""><input class="checkBoxAll" id="checkBoxAll" type="checkbox" onchange="SelectAll()"><span class="showedChecklist"></span></label></th>
+                                    <th class="column1"><label class="checkbox_Container" for=""><input class="checkBoxAll" id="CheckBoxAll" type="checkbox" onchange="selectAllCheckBox()"><span class="showedChecklist"></span></label></th>
                                     <th class="column2">Name</th>
                                     <th class="column3">Score</th>
                                     <th class="column4">Email</th>
@@ -54,11 +54,11 @@
                         </table>
                     </div>
                     <div class="result">
-                        <button class="calculate" onclick="averageCount();maxCount()">Calculate</button>
+                        <button class="calculate" onclick="averageCalculate();maxCalculate()">Calculate</button>
                         <label class="result-label" for="">Average:</label>
-                        <input type="text" id="average">
+                        <input type="text" id="Average">
                         <label class="result-label" for="">Max:</label>
-                        <input type="text" id="max">
+                        <input type="text" id="Max">
                     </div> 
                 </div> 
             </div>
